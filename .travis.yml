@@ -7,4 +7,4 @@ before_install:
   - docker build -t cncubukcu/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run cncubukcu/docker-react yarn test -- --coverage
+  - docker run -e CI=true cncubukcu/docker-react yarn test -- --coverage
